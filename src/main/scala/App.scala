@@ -17,7 +17,7 @@ import scala.sys.env
                 complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http</h1>"))
                 
     println(s"${sys.env("PORT")}")
-    val bindingFuture = Http().newServerAt("https://woogy-bot.herokuapp.com/", sys.env("PORT").toInt).bind(route)
+    Http().newServerAt("0.0.0.0", sys.env("PORT").toInt).bind(route)
 
     println(s"Server now online. Please navigate to http://127.0.0.1${sys.env("PORT")}/hello\nPress RETURN to stop...")
 
