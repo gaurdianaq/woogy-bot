@@ -20,7 +20,9 @@ import scala.sys.env
     val bindingFuture = Http().newServerAt("https://woogy-bot.herokuapp.com/", sys.env("PORT").toInt).bind(route)
 
     println(s"Server now online. Please navigate to http://127.0.0.1${sys.env("PORT")}/hello\nPress RETURN to stop...")
+
+    /*
     StdIn.readLine() // let it run until user presses return
     bindingFuture
       .flatMap(_.unbind()) // trigger unbinding from the port
-      .onComplete(_ => system.terminate()) // and shutdown when done
+      .onComplete(_ => system.terminate()) // and shutdown when done*/
